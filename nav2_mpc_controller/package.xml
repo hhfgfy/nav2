@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>nav2_mpc_controller</name>
+  <version>0.1.0</version>
+  <description>Model Predictive Control (MPC) plugin for the Nav2 controller server.</description>
+
+  <maintainer email="nav2@example.com">Nav2 Maintainers</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>angles</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav2_common</depend>
+  <depend>nav2_core</depend>
+  <depend>nav2_costmap_2d</depend>
+  <depend>nav2_ros_common</depend>
+  <depend>nav2_util</depend>
+  <depend>nav_msgs</depend>
+  <depend>pluginlib</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -95,7 +95,7 @@ controller_server:
     failure_tolerance: 0.3
     progress_checker_plugins: ["progress_checker"]
     goal_checker_plugins: ["general_goal_checker"] # "precise_goal_checker"
-    controller_plugins: ["FollowPath"]
+    controller_plugins: ["FollowPath", "MPCFollowPath"]
     use_realtime_priority: false
     speed_limit_topic: "speed_limit"
 
@@ -218,6 +218,20 @@ controller_server:
       #   enabled: true
       #   twirling_cost_power: 1
       #   twirling_cost_weight: 10.0
+    MPCFollowPath:
+      plugin: "nav2_mpc_controller::MPCController"
+      prediction_horizon: 12
+      time_step: 0.1
+      max_linear_velocity: 0.5
+      max_angular_velocity: 1.5
+      path_lookahead_distance: 1.0
+      goal_tolerance: 0.25
+      obstacle_cost_weight: 0.002
+      orientation_cost_weight: 1.0
+      velocity_cost_weight: 0.1
+      linear_samples: 5
+      angular_samples: 7
+      allow_reverse_motion: false
 
 local_costmap:
   local_costmap:

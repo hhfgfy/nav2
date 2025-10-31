@@ -1,0 +1,8 @@
+<library path="nav2_mpc_controller">
+  <class type="nav2_mpc_controller::MPCController" base_class_type="nav2_core::Controller">
+    <description>
+      Model Predictive Control (MPC) plugin that samples control sequences over a finite horizon
+      and selects the lowest cost command using a costmap-aware cost function.
+    </description>
+  </class>
+</library>
